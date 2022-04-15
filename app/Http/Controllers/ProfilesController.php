@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 class ProfilesController extends Controller
 {
     //
-    public function index()
+    public function index(Request $request)
     {
 
 
-        return view('profiles.index');
+        return view('profiles.index',[
+            'profile' => $request->user()
+        ]);
     }
 }

@@ -97,9 +97,9 @@
                             <li>
                                 <a href="{{route('home')}}"  class="nav-link px-0 align-middle">
                                     <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Dashboard</span> </a>
-                                <a href="/post"  class="nav-link px-0 align-middle">
+                                <a href="{{route('post')}}"  class="nav-link px-0 align-middle">
                                     <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Posts</span> </a>
-                                <a href="#nochnichtvergeben" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                                <a href="{{route('profile.show',auth()->user()->name)}}"  class="nav-link px-0 align-middle">
                                     <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Profil</span> </a>
                             </li>
                         </ul>
