@@ -33,7 +33,7 @@
                         @if($posts->count())
                             @foreach($posts as $post)
                                 <div class="mb-4">
-                                    <a href="" class="font-monospace fw-bold " style="text-decoration: none">{{$post->user->name}}</a> <span class="text-black-50
+                                    <a href="{{route('profile.show',$post->user->name)}}" class="font-monospace fw-bold " style="text-decoration: none">{{$post->user->name}}</a> <span class="text-black-50
                                         text-sm-center">{{$post->created_at}}</span>
                                     <p class="mb-2">{{$post->body}}</p>
 

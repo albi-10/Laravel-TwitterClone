@@ -32,4 +32,4 @@ Route::post('/post/{post}/dislikes', [App\Http\Controllers\PostDislikeController
 Route::delete('/post/{post}/dislikes', [App\Http\Controllers\PostDislikeController::class, 'destroy'])->name('post.dislikes');
 
 
-Route::get('/profile/{user}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
+Route::get('/profile/{user:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');

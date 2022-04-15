@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ProfilesController extends Controller
 {
     //
-    public function index(Request $request)
+    public function index(User $user)
     {
 
 
         return view('profiles.index',[
-            'profile' => $request->user()
+
+            'user' => $user
         ]);
     }
 }
