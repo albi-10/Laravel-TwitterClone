@@ -37,4 +37,8 @@ class Post extends Model
     {
         return $user->id === $this->user_id;
     }
+    public function body() : string
+    {
+        return $this->body;
+    }
 }
