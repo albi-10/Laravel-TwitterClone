@@ -34,7 +34,3 @@ Route::delete('/post/{post}/dislikes', [App\Http\Controllers\PostDislikeControll
 
 Route::get('/profile/{user:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
 
-// Zum Test für Ajax
-Route::get('/', [App\Http\Controllers\CrudController::class, 'index']);
-Route::resource('todo', App\Http\Controllers\CrudController::class);
-// Ajax Ende
