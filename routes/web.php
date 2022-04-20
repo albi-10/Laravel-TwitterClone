@@ -34,3 +34,9 @@ Route::delete('/post/{post}/dislikes', [App\Http\Controllers\PostDislikeControll
 
 Route::get('/profile/{user:name}', [App\Http\Controllers\ProfilesController::class, 'index'])->name('profile.show');
 
+Route::get('/students',[App\Http\Controllers\StudentController::class, 'index']);
+Route::post('/add-student', [App\Http\Controllers\StudentController::class, 'addStudent'])->name('student.add');
+
+//ajaxPost
+Route::get('/ajaxpost',[App\Http\Controllers\PostController::class, 'index2']);
+Route::post('/add-ajaxpost', [App\Http\Controllers\PostController::class, 'store2'])->name('student.add');

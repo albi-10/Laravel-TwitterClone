@@ -20,6 +20,21 @@ class PostController extends Controller
         ]);
     }
 
+    // index für ajaxRequest
+    public function index2(){
+        $posts = Post::orderBy('id','DESC')->get();
+        return view('ajaxpost', compact('posts'));
+    }
+    public function store2(Request $request)
+    {
+        $post = new Post();
+        $post->body = $request-> body;
+
+        $post->save();
+        return response()->json($post);
+
+    }
+
     public function store(Request $request) //Überprüft
     {
         $this->validate($request,[
