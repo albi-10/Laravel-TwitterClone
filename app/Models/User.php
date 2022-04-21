@@ -54,4 +54,7 @@ class User extends Authenticatable
     {
         return $this->hasMany(Dislike::class);
     }
+    public function userprofile(){
+        return $this->hasOne('App\Models\Userprofile');
+    }
 }

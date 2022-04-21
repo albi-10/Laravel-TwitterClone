@@ -1,5 +1,5 @@
 
 <div class="mb-4">
 
-    <p>Hello {{dd($post)}}</p>
+    <p> {{($post->body)}}</p>
 </div>

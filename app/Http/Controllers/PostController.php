@@ -22,15 +22,23 @@ class PostController extends Controller
 
     // index für ajaxRequest
     public function index2(){
-        $posts = Post::orderBy('id','DESC')->get();
-        return view('ajaxpost', compact('posts'));
+        $posts = Post::latest()->with(['user','likes'])->paginate(30);
+        return view('ajaxpost', [
+            'posts' => $posts]);
     }
+
     public function store2(Request $request)
     {
-        $post = new Post();
-        $post->body = $request-> body;
 
-        $post->save();
+        $post = new Post();
+        $post->body = $request->body2;
+        $post->user_id = $request->usrname;
+        $post->user->name= $request->name;
+
+        //$post->body = "Test";
+        //$post->user_id=1;
+
+        $post->save($request->all());
         return response()->json($post);
 
     }

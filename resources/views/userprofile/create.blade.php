@@ -16,7 +16,8 @@
                             </ul>
                         </div>
                         <div class="col-8">
-                            <h3>Dashboard</h3>
+                            <h3>Profile Image upload form</h3>
+                            <userprofile-component></userprofile-component>
                         </div>
                     </div>
                 </div>
