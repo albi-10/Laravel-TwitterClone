@@ -40,6 +40,7 @@ Route::get('/students',[App\Http\Controllers\StudentController::class, 'index'])
 Route::post('/add-student', [App\Http\Controllers\StudentController::class, 'addStudent'])->name('student.add');
 
 //ajaxPost
+
 Route::get('/ajaxpost',[App\Http\Controllers\PostController::class, 'index2']);
 Route::post('/add-ajaxpost', [App\Http\Controllers\PostController::class, 'store2'])->name('ajax.add');
 
@@ -49,4 +50,12 @@ Route::get("/cp",[App\Http\Controllers\ProfilesController::class, "changeProfile
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 //Route::get('/profile', 'App\Http\Controllers\HomeController@profile')->name('profile');
 Route::resource('userprofile','App\Http\Controllers\UserprofileController');
+
+Route::get('/chart', [App\Http\Controllers\ChartController::class, 'index']);
+
+//
+Route::get('/phpinfo', function() {
+    return phpinfo();
+});
+
 

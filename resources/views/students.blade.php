@@ -106,10 +106,10 @@
                     },
                     success: function (response) {
                         if (response){
-                            $("#studentTable").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td>' +
+                            $("#studentTable tbody").prepend('<tr><td>'+response.firstname+'</td><td>'+response.lastname+'</td><td>'+response.email+'</td>' +
                                 '<td>'+response.phone+'</td></tr>');
                             $("#studentForm")[0].reset();
-                            //$("#studentModal").modal('hidden');
+                            $("#studentModal").modal('hidden');
                         }
                     },
                     error: function (data) {
