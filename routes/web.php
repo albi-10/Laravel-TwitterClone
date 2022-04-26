@@ -52,6 +52,7 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::resource('userprofile','App\Http\Controllers\UserprofileController');
 
 Route::get('/chart', [App\Http\Controllers\ChartController::class, 'index']);
+Route::get('/piechart', [App\Http\Controllers\ChartController::class, 'piechart']);
 
 //
 Route::get('/phpinfo', function() {

@@ -9,15 +9,12 @@
                 <div class="col-md-3">
                     <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img src="/uploads/avatars/{{$user->avatar}}" class="rounded-circle mt-5" style="width: 250px; height: 250px;  ">
                         <span class="font-weight-bold">{{$user->name}}</span><span class="text-black-50">{{$user->email}}</span><span> </span>
-                        <form action="/profile" method="POST" enctype="multipart/form-data">
+
                             <div class="card mt-2 col-md-12" >
-                                <label>Update Profilbild</label>
-                                <input type="file" name="avatar">
-                                <input type="hidden" namen="token" value="{{ csrf_token() }}">
-                                <input type="submit" class="btn-primary btn btn-sm">
+                                <a class="btn btn-primary btn-sm" href="/profile"> Profilbild ändern</a>
                             </div>
 
-                        </form>
+
                         <textarea class="md-textarea  form-control mt-4 col-md-12" rows="6" cols="50" style="resize: none" placeholder="Hier steht ihre Profilbeschreibung"></textarea>
                     </div>
 

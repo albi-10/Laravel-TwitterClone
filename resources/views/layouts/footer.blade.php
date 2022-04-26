@@ -1,6 +1,4 @@
-@extends('layouts.app')
 
-@section('footer')
     <div class="fixed-bottom">
         <footer class="bg-light text-center text-lg-start">
             <!-- Copyright -->
@@ -11,4 +9,4 @@
             <!-- Copyright -->
         </footer>
     </div>
-@endsection
+
