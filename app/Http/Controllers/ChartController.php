@@ -57,14 +57,14 @@ class ChartController extends Controller
         ,
             "2" => array
             (
-                "value" => 234,
-                "name" => "Grapes",
+                "y" => 0,
+                "name" => "KeinWert",
             )
         ,
             "3" => array
             (
-                "value" => 135,
-                "name" => "Banana",
+                "y" => 0,
+                "name" => "keinWert",
             )
         );
 
