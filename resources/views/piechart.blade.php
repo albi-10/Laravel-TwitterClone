@@ -95,7 +95,6 @@
             };
         })
     });
-
     // Build the chart
     Highcharts.chart('container', {
         chart: {
@@ -131,5 +130,5 @@
             data: pieData
         }]
     });
-    </script>
+</script>
 </html>
