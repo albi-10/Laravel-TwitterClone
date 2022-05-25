@@ -11,16 +11,19 @@ pipeline {
                 }
             }
             stage("Unit test") {
-                script{
-                        try {
-                           sh 'php artisan test'
-                        }
-                        catch(err) {
-                           echo "Caught: ${err}"
-                           currentBuild.result = 'FAILURE'
-                        }
-                        step([$class: 'Mailer', recipients: 'berisha@beyeribia.de'])
+                steps{
+                    script{
+                                            try {
+                                               sh 'php artisan test'
+                                            }
+                                            catch(err) {
+                                               echo "Caught: ${err}"
+                                               currentBuild.result = 'FAILURE'
+                                            }
+                                            step([$class: 'Mailer', recipients: 'berisha@beyeribia.de'])
+                    }
                 }
+
             }
      }
 }
