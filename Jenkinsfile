@@ -11,7 +11,7 @@ pipeline {
             }
         }
         stage("Unit test") {
-            try() {
+            try {
                 steps {
                     sh 'php artisan test'
                 }
