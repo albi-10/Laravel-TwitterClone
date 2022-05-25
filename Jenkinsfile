@@ -12,13 +12,16 @@ agent any
     }
   }
   stage('Unit test') {
-    try {
-      sh 'php artisan test'
+    script{
+        try {
+              sh 'php artisan test'
+            }
+            catch(err) {
+              echo "Caught: ${err}"
+              currentBuild.result = 'FAILURE'
+            }
+            step([$class: 'Mailer', recipients: 'admin@somewhere'])
     }
-    catch(err) {
-      echo "Caught: ${err}"
-      currentBuild.result = 'FAILURE'
-    }
-    step([$class: 'Mailer', recipients: 'admin@somewhere'])
+
   }
 }
