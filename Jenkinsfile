@@ -1,4 +1,4 @@
-node('twitter-clone') {
+node {
 agent any
   echo 'Pipeline logic starts'
 
