@@ -11,10 +11,15 @@ pipeline {
             }
         }
         stage("Unit test") {
-            steps {
-                sh 'php artisan test'
+            try() {
+                steps {
+                    sh 'php artisan test'
+                }
+            } catch(err) {
+                echo "Caught: ${err}"
             }
+            step([$class: 'Mailer', recipients: 'berisha@beyeribia.de']
         }
-  }
+    }
 }
 
