@@ -18,6 +18,7 @@ pipeline {
                                             }
                                             catch(err) {
                                                echo "Caught: ${err}"
+                                               currentStage.result = 'FAILURE'
                                                currentBuild.result = 'FAILURE'
                                             }
                                             //step([$class: 'Mailer', recipients: 'berisha@beyeribia.de'])
