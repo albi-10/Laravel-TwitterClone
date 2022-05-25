@@ -20,7 +20,7 @@ pipeline {
                                                echo "Caught: ${err}"
                                                currentBuild.result = 'FAILURE'
                                             }
-                                            step([$class: 'Mailer', recipients: 'berisha@beyeribia.de'])
+                                            //step([$class: 'Mailer', recipients: 'berisha@beyeribia.de'])
                     }
                 }
 
