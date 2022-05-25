@@ -14,6 +14,7 @@ class ChartController extends Controller
             ->whereYear('created_at', date('Y'))
             ->groupBy(DB::raw("Month(created_at)"))
             ->pluck('count');
+        //dd($userData);
 
 
         return view('chart', compact('userData'));
