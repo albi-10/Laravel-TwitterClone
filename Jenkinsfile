@@ -1,5 +1,5 @@
-node('twiiter-clone') {
-
+node('twitter-clone') {
+agent any
   echo 'Pipeline logic starts'
 
   stage('Build') {
