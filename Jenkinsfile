@@ -15,7 +15,7 @@ pipeline {
 
                  }catch(ex){
                     echo 'something failed'
-                     throw
+
                  }
                 steps {
                     sh 'php artisan test'
