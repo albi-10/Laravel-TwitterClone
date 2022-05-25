@@ -16,6 +16,6 @@ class Test extends TestCase
     public function test_Home()
     {
 
-        $this->get('/')->assertSee('Laravel');
+        $this->get('/')->assertSee('Fehler');
     }
 }
