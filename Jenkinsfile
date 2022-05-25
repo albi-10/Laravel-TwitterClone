@@ -11,16 +11,12 @@ pipeline {
                 }
             }
             stage("Unit test") {
-                 try {
-
-                 }catch(ex){
-                    echo 'something failed'
-
-                 }
                 steps {
                     sh 'php artisan test'
                 }
-
+                catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
+                    throw new RuntimeException("synthetic")
+                  }
             }
      }
 }
