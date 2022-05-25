@@ -11,7 +11,12 @@ pipeline {
                 }
             }
             stage("Unit test") {
+                 try {
 
+                 }catch(ex){
+                    echo 'something failed'
+                     throw
+                 }
                 steps {
                     sh 'php artisan test'
                 }
